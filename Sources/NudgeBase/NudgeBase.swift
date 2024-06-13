@@ -272,7 +272,9 @@ private let fileName = "NudgeBase.swift"
             NudgeAnalytics.trackError(error: response.debugDescription, file: fileName, function: "initializeNudge")
   //          print("makeApiCall error is " + response.debugDescription)
             KeyValueStore.removeObject(key: KeyValueStore.coreServerToken)
-            failure(String(data: data!, encoding: String.Encoding.utf8)!)
+            if (data != nil){
+                failure(String(data: data!, encoding: String.Encoding.utf8)!)
+            }
         })
     }
     
