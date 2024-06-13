@@ -17,6 +17,7 @@ public class EnvironmentUtils {
         case STAGING = "staging"
         case STAGING2 = "staging2"
         case PROD = "prod"
+        case DR = "dr"
     }
 
     public enum Service: String {
@@ -48,8 +49,10 @@ public class EnvironmentUtils {
         switch (_env) {
             case Environment.DEV:       return "https://" + service + ".dev.nudge.rocks/"
             case Environment.STAGING:   return "https://" + service + ".staging.nudge.rocks/"
-            case Environment.STAGING2:   return "https://" + service + ".staging2.nudge.rocks/"
+            case Environment.STAGING2:  return "https://" + service + ".staging2.nudge.rocks/"
+            case Environment.DR:        return "https://" + service + ".proddr.dr.larky.cloud/"
             case Environment.PROD:      return "https://" + service + ".nudge.larky.cloud/"
+            
         }
     }
     
