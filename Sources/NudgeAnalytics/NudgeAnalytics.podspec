@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
   s.source_files = 'nudgeBase/Sources/NudgeAnalytics/*.{swift}'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Analytics', '4.1.2'
-  s.dependency 'EnvironmentUtils', '1.0.0'
-  s.dependency 'KeyValueStore', '1.0.1'
+  s.dependency 'EnvironmentUtils', '1.0.1'
+  s.dependency 'KeyValueStore', '1.0.2'
 end
