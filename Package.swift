@@ -17,8 +17,7 @@ let package = Package(
         .package(
           //name: "Firebase",
           url: "https://github.com/firebase/firebase-ios-sdk.git",
-          .upToNextMajor(from: "9.0.0")
-          // .upToNextMajor(from: "8.10.0")
+          from: "11.5.0"
         ),
         .package(
         //  name: "Segment",
@@ -49,7 +48,8 @@ let package = Package(
         ),
         .target(
             name: "nudgeBase",
-            dependencies: ["EnvironmentUtils", "KeyValueStore", "NudgeAnalytics"],
+            dependencies: ["EnvironmentUtils", "KeyValueStore", "NudgeAnalytics",
+                           .product(name: "FirebaseMessaging", package: "firebase-ios-sdk")],
             path: "Sources/nudgeBase"
         ),
         .testTarget(
